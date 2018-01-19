@@ -23,6 +23,7 @@ public class LonelyTwitterActivity extends Activity {
 	private static final String FILENAME = "file.sav";
 	private EditText bodyText;
 	private ListView oldTweetsList;
+	private ArrayList<LonelyTwittermood> tweets;
 	
 	/** Called when the activity is first created. */
 	@Override
@@ -39,6 +40,7 @@ public class LonelyTwitterActivity extends Activity {
 			public void onClick(View v) {
 				setResult(RESULT_OK);
 				String text = bodyText.getText().toString();
+				tweets.add(new LonelyTwittermood(text));
 				saveInFile(text, new Date(System.currentTimeMillis()));
 				finish();
 
