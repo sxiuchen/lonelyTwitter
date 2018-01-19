@@ -8,20 +8,10 @@ import java.util.Date;
 
 public abstract class LonelyTwittermood {
     private Date times;
-    private String text;
 
-    public String getText() {
-        return text;
-    }
-
-    public LonelyTwittermood(String text) {
+    public LonelyTwittermood() {
         super();
-        this.text = text;
         times = new Date();
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 
     public Date getTimestamp() {
