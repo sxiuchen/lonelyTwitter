@@ -1,10 +1,7 @@
 
-
 /*
- * Class: Tweet
- * Version: 1.0.0
- * Date: 30/01/2018
- * Copyright (c) 2018 Twitter X. adfad
+ * Copyright (c) 2018 Twitter X. CMPUT301 University of Alberta-All right Reserved. You may use, distribute and modify this code under team and conditions of the code of Student behaivor at University of ALberta.
+ * You can find copy of linence in this project. Or connect with chuyang1@ualberta.ca
  */
 
 package ca.ualberta.cs.lonelytwitter;
@@ -39,6 +36,11 @@ public abstract class Tweet implements Tweetable {
         this.date = date;
     }
 
+    /**
+     * get message from activity
+     *
+     * @return return tweet message
+     */
     public String getMessage(){
         return message;
     }
@@ -59,15 +61,40 @@ public abstract class Tweet implements Tweetable {
         }
     }
 
+    /**
+     *  get data
+     *
+     * @return tweet data
+     */
+
     public Date getDate(){
         return date;
     }
+
+    /**
+     * set data
+     *
+     * @param date tweet data
+     */
 
     public void setDate(Date date){
         this.date = date;
     }
 
+    /**
+     * check tweet is important or not
+     * empty now
+     *
+     * @return
+     */
+
     public abstract Boolean isImportant();
+
+    /**
+     *  change data to string
+     *
+     * @return string data
+     */
 
     public String toString() {
         return date.toString() + " | " + message;

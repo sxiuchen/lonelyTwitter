@@ -1,3 +1,9 @@
+
+/*
+ * Copyright (c) 2018 Twitter X. CMPUT301 University of Alberta-All right Reserved. You may use, distribute and modify this code under team and conditions of the code of Student behaivor at University of ALberta.
+ * You can find copy of linence in this project. Or connect with chuyang1@ualberta.ca
+ */
+
 package ca.ualberta.cs.lonelytwitter;
 
 import java.io.BufferedReader;
@@ -25,6 +31,11 @@ import android.widget.Toast;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
+
+/**
+ * The build in class of android activity
+ * create on 08/01/2018 by suqing
+ */
 
 public class LonelyTwitterActivity extends Activity {
 
@@ -62,6 +73,12 @@ public class LonelyTwitterActivity extends Activity {
 		});
 	}
 
+	/**
+	 * android build in method
+	 *
+	 * override to run tweet
+	 */
+
 	@Override
 	protected void onStart() {
 
@@ -77,6 +94,9 @@ public class LonelyTwitterActivity extends Activity {
 
 	}
 
+	/**
+	 * load gson file from local
+	 */
 	private void loadFromFile() {
 
 		try {
@@ -98,6 +118,9 @@ public class LonelyTwitterActivity extends Activity {
 
 	}
 
+	/**
+	 * save information to local
+	 */
 	private void saveInFile() {
 		try {
 
@@ -124,6 +147,10 @@ public class LonelyTwitterActivity extends Activity {
 		Log.i("Lifecycle", "onDestroy is called");
 	}
 
+	/**
+	 * delete all tweets.
+	 * @param view
+	 */
 	// new class for clear
 	public void clear(View view) {
 		loadFromFile();
