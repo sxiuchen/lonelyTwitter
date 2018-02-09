@@ -14,6 +14,7 @@ import io.searchbox.core.Index;
 import io.searchbox.core.Search;
 import io.searchbox.core.SearchResult;
 import io.searchbox.core.DocumentResult;
+import io.searchbox.params.SearchType;
 
 /**
  * Created by romansky on 10/20/16.
@@ -62,9 +63,10 @@ public class ElasticsearchTweetController {
             ArrayList<NormalTweet> tweets = new ArrayList<NormalTweet>();
 
             // TODO Build the query
-            Search search = new Search.Builder(search_parameters[0]).addIndex("testing").addType("tweet").build();
+            Search search = new Search.Builder(search_parameters[0]).setSearchType(SearchType.QUERY_THEN_FETCH).addIndex("testing").addType("tweet").build();
             try {
                // TODO get the results of the query
+                Log.i("Test", search_parameters[0]);
                 SearchResult result = client.execute(search);
                 if(result.isSucceeded())
                 {
